@@ -1,0 +1,360 @@
+/* ===============================
+   ROOT VARIABLES
+================================ */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #ecf0f1;
+    --text-dark: #333;
+    --text-light: #666;
+    --white: #ffffff;
+}
+
+/* ===============================
+   RESET
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===============================
+   BODY
+================================ */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #e9ecef;
+    color: var(--text-dark);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* ===============================
+   RESUME LAYOUT
+================================ */
+.resume-container {
+    width: 100%;
+    max-width: 900px;
+    background: var(--white);
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    min-height: 1000px;
+}
+
+/* ===============================
+   LEFT SIDEBAR
+================================ */
+.left-col {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.profile-img-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    border: 4px solid var(--secondary-color);
+    overflow: hidden;
+}
+
+.profile-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sidebar-section h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 6px;
+    margin-bottom: 15px;
+    color: var(--white);
+}
+
+/* ===============================
+   PERSONAL INFO (ICON + TEXT)
+   MATCHES IMAGE PERFECTLY
+================================ */
+.personal-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.personal-info li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+    font-size: 0.95rem;
+    color: var(--white);
+}
+
+/* Icon container */
+.personal-info .icon {
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SVG icons */
+.personal-info .icon svg {
+    width: 22px;
+    height: 22px;
+    fill: var(--secondary-color);
+}
+
+/* Text */
+.personal-info .text {
+    line-height: 1.3;
+    word-break: break-word;
+}
+
+/* Links inside personal info */
+.personal-info a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.personal-info a:hover {
+    color: var(--secondary-color);
+}
+
+/* ===============================
+   SKILLS / LANGUAGES / HOBBIES
+================================ */
+.skills-list,
+.languages-list,
+.hobbies-list {
+    list-style: none;
+}
+
+.skills-list li,
+.languages-list li,
+.hobbies-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.skills-list li i,
+.languages-list li i,
+.hobbies-list li i {
+    color: var(--secondary-color);
+    font-size: 0.85rem;
+}
+
+/* ===============================
+   RIGHT CONTENT
+================================ */
+.right-col {
+    padding: 40px;
+    background-color: var(--white);
+}
+
+.header {
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+.header h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+    margin-top: 5px;
+    letter-spacing: 2px;
+}
+
+/* ===============================
+   MAIN SECTIONS
+================================ */
+.main-section {
+    margin-bottom: 30px;
+}
+
+.main-section h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.main-section h3 i {
+    margin-right: 10px;
+    background: var(--secondary-color);
+    color: var(--white);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 0.9rem;
+}
+
+.content-block {
+    padding-left: 10px;
+    border-left: 2px solid #eee;
+}
+
+.content-block p {
+    font-size: 0.95rem;
+    text-align: justify;
+}
+
+/* ===============================
+   EDUCATION
+================================ */
+.edu-item {
+    margin-bottom: 20px;
+}
+
+.edu-item h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.edu-item .school {
+    font-weight: 600;
+}
+
+.edu-item .date {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+.edu-item .score {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+/* ===============================
+   TECH SKILLS LIST
+================================ */
+.content-block ul {
+    list-style: none;
+}
+
+.content-block ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+}
+
+.content-block ul li::before {
+    content: "►";
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-size: 0.8rem;
+}
+
+/* ===============================
+   DECLARATION
+================================ */
+.declaration {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.signature-block {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.signature-img {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+/* ===============================
+   FLOATING PRINT BUTTON
+================================ */
+.fab {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+    .resume-container {
+        grid-template-columns: 1fr;
+    }
+    .left-col {
+        order: 2;
+    }
+    .right-col {
+        order: 1;
+    }
+    .header {
+        text-align: center;
+    }
+}
+
+/* ===============================
+   PRINT
+================================ */
+@media print {
+    body {
+        background: none;
+        padding: 0;
+    }
+    .resume-container {
+        box-shadow: none;
+    }
+    .fab {
+        display: none;
+    }
+    * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
