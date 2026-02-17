@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id = "btn1">Login</button>
+    <p id="msg1"></p>
+    <script>
+        function greet(callback){
+            setTimeout(function(){
+                callback();
+            },1000);
+        }
+        document.getElementById("btn1").addEventListener("click",function(){
+            greet(function(){
+                document.getElementById("msg1").innerHTML = "Welcome user";
+            })
+        })
+    </script>
+</body>
+</html>
