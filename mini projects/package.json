@@ -1,0 +1,12 @@
+{
+  "name": "mini-projects",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "saurav",
+  "type": "module",
+  "main": "ATM Machine System.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

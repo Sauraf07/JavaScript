@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page </title>
+</head>
+<body>
+    <input type="text" id="user">
+    <button id="Loginbtn">Login</button>
+    <p id="msg"></p>
+
+    <script>
+        document.getElementById("Loginbtn").addEventListener("click", function(){
+            document.getElementById("msg").innerHTML = " Cheaking.....";
+
+            setTimeout(()=>{
+                document.getElementById("msg").innerText = " Login Sucessful.."
+            },1000)
+        })
+    </script>
+</body>
+</html>
