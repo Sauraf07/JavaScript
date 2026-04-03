@@ -1,0 +1,4 @@
+import { openDb } from '../config/db.js';
+export const getProfileByUser = async (userId) => { const [rows] = await (await openDb()).query('SELECT * FROM profiles WHERE user_id = ?', [userId]); return rows[0]; };
+export const createProfile = async (userId, course, semester) => { const [result] = await (await openDb()).query('INSERT INTO profiles (user_id, course, semester) VALUES (?, ?, ?)', [userId, course, semester]); return result; };
+export const updateProfile = async (userId, course, semester) => { const [result] = await (await openDb()).query('UPDATE profiles SET course = ?, semester = ? WHERE user_id = ?', [course, semester, userId]); return result; };

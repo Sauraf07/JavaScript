@@ -1,0 +1,3 @@
+import { openDb } from '../config/db.js';
+export const getUserByEmail = async (email) => { const [rows] = await (await openDb()).query('SELECT * FROM users WHERE email = ?', [email]); return rows[0]; };
+export const createUser = async (name, email, hashedPassword) => { const [result] = await (await openDb()).query('INSERT INTO users (name, email, password) VALUES (?, ?, ?)', [name, email, hashedPassword]); return result; };
